@@ -48,6 +48,7 @@ init() {
         set_pg_option 'logging_collector' "true" "data_dir"
         set_pg_option 'log_destination' "'csvlog,jsonlog'" "data_dir"
         set_pg_option 'log_directory' "'logs'" "data_dir"
+        set_pg_option 'max_connections' '2000' 'data_dir'
     else
         echo "Data directory already initialized, skipping."
     fi
